@@ -1,0 +1,51 @@
+﻿@model IEnumerable<mg118115MIS4200.Models.Enrollment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Details for Enrollment</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Class.classTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.enrolledSince)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class.classTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.enrolledSince)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EnrollmentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EnrollmentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EnrollmentId })
+        </td>
+    </tr>
+}
+
+</table>

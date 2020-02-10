@@ -1,0 +1,34 @@
+﻿@model mg118115MIS4200.Models.Class
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Class</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.classTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.classId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
