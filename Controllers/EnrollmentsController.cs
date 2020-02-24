@@ -41,7 +41,7 @@ namespace mg118115MIS4200.Controllers
         public ActionResult Create()
         {
             ViewBag.classId = new SelectList(db.Classes, "classId", "classTitle");
-            ViewBag.studentId = new SelectList(db.Students, "studentId", "firstName");
+            ViewBag.studentId = new SelectList(db.Students, "studentId", "fullName");
             return View();
         }
 

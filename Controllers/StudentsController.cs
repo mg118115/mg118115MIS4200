@@ -19,6 +19,7 @@ namespace mg118115MIS4200.Controllers
         public ActionResult Index()
         {
             return View(db.Students.ToList());
+            
         }
 
         // GET: Students/Details/5
